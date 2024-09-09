@@ -10,7 +10,7 @@ html, body {
   .button {
     position: relative;
     background-color: #4455FF;
-    border-radius: 100px 100px 0 0;
+    border-radius: 40px 40px 0 0;
     text-align: center;
     width: 50%;
     height: 100px;
