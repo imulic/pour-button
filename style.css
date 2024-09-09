@@ -1,0 +1,50 @@
+body {
+    padding: 0;
+    margin: 0;
+  }
+  
+  .button {
+    position: relative;
+    background-color: #4455FF;
+    border-radius: 100px 100px 0 0;
+    text-align: center;
+    width: 300px;
+    height: 100px;
+    line-height: 100px;
+    font-size: 2.5rem;
+    color: white;
+    font-family: "helvetica";
+    border: none;
+    cursor: pointer;
+    outline: none;
+    overflow: visible; /* Allow the ripple to overflow outside the button */
+    z-index: 1;
+    transition: transform 0.3s ease; 
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100vh;
+  }
+  
+  .button.active {
+    transform: translateY(10px); /* Move the button down by 10px */
+  }
+  
+  .ripple {
+    position: absolute;
+    border: none;
+    transform: scale(0);
+    animation: ripple-animation 4s ease-out;
+    pointer-events: none;
+    z-index: -1; /* Ensures the ripple goes under the button's text */
+  }
+  
+  @keyframes ripple-animation {
+    to {
+      transform: scale(5); /* Grow the ripple beyond button boundaries */
+      opacity: 0; /* Fade out effect */
+    }
+  }
