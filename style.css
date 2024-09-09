@@ -8,7 +8,7 @@ body {
     background-color: #4455FF;
     border-radius: 100px 100px 0 0;
     text-align: center;
-    width: 300px;
+    width: 600px;
     height: 100px;
     line-height: 100px;
     font-size: 2.5rem;
@@ -20,6 +20,11 @@ body {
     overflow: visible; /* Allow the ripple to overflow outside the button */
     z-index: 1;
     transition: transform 0.3s ease; 
+
+    user-select: none; /* Prevents text from being selectable */
+    -webkit-user-select: none; /* For Safari */
+    -moz-user-select: none; /* For Firefox */
+    -ms-user-select: none; /* For IE/Edge */
   }
   
   .container {
