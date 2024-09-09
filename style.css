@@ -1,6 +1,10 @@
-body {
+html, body {
     padding: 0;
     margin: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
   }
   
   .button {
@@ -20,7 +24,6 @@ body {
     overflow: visible; /* Allow the ripple to overflow outside the button */
     z-index: 1;
     transition: transform 0.3s ease; 
-
     user-select: none; /* Prevents text from being selectable */
     -webkit-user-select: none; /* For Safari */
     -moz-user-select: none; /* For Firefox */
@@ -28,10 +31,10 @@ body {
   }
   
   .container {
+    min-height: 100vh; /* 100% of the viewport height */
     display: flex;
     justify-content: center;
-    align-items: flex-end;
-    height: 100vh;
+    align-items: flex-end; /* Align content to the bottom */
   }
   
   .button.active {
